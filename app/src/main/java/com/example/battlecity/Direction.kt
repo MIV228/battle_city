@@ -2,7 +2,7 @@ package com.example.battlecity
 
 enum class Direction {
     UP,
-    DOWN,
+    BOTTOM,
     LEFT,
     RIGHT,
 }
