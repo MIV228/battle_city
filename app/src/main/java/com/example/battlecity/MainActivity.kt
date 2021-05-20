@@ -37,13 +37,13 @@ class MainActivity : AppCompatActivity() {
             }
             Direction.LEFT -> {
                 val myTank = findViewById<ImageView>(R.id.my_tank)
-                myTank.rotation = 90F
-                (myTank.layoutParams as FrameLayout.LayoutParams).leftMargin += 50
+                myTank.rotation = 270F
+                (myTank.layoutParams as FrameLayout.LayoutParams).leftMargin -= 50
             }
             Direction.RIGHT -> {
                 val myTank = findViewById<ImageView>(R.id.my_tank)
-                myTank.rotation = 270F
-                (myTank.layoutParams as FrameLayout.LayoutParams).leftMargin -= 50
+                myTank.rotation = 90F
+                (myTank.layoutParams as FrameLayout.LayoutParams).leftMargin += 50
             }
         }
         val myTank = findViewById<ImageView>(R.id.my_tank)
