@@ -1,0 +1,2 @@
+rootProject.name = "Battle City"
+include ':app'
