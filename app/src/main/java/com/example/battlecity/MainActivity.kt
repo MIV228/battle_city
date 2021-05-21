@@ -13,12 +13,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        when(MotionEvent)
-        {
-            ACTION_UP -> move(Direction.UP)
-            ACTION_DOWN -> move(Direction.BOTTOM)
-
-        }
+//        when(MotionEvent)
+//        {
+//            ACTION_UP -> move(Direction.UP)
+//            ACTION_DOWN -> move(Direction.BOTTOM)
+//
+//        }
 
 
 
