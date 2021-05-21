@@ -19,11 +19,16 @@ class MainActivity : AppCompatActivity() {
 //            ACTION_DOWN -> move(Direction.BOTTOM)
 //
 //        }
-
-
-
-
+        val up = findViewById<ImageView>(R.id.up)
+        up.setOnClickListener{ move(Direction.UP) }
+        val left = findViewById<ImageView>(R.id.left)
+        left.setOnClickListener{ move(Direction.LEFT) }
+        val right = findViewById<ImageView>(R.id.right)
+        right.setOnClickListener{ move(Direction.RIGHT) }
+        val down = findViewById<ImageView>(R.id.down)
+        down.setOnClickListener{ move(Direction.BOTTOM) }
     }
+
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
         when (keyCode) {
