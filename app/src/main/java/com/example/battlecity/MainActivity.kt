@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.KeyEvent
 import android.view.KeyEvent.*
 import android.view.MotionEvent
+import android.view.View
 import android.widget.FrameLayout
 import android.widget.ImageView
 
@@ -20,13 +21,13 @@ class MainActivity : AppCompatActivity() {
 //
 //        }
         val up = findViewById<ImageView>(R.id.up)
-        up.setOnClickListener{ move(Direction.UP) }
+        up.setOnTouchListener{ view: View, direction: MotionEvent? -> move(Direction.UP) }
         val left = findViewById<ImageView>(R.id.left)
-        left.setOnClickListener{ move(Direction.LEFT) }
+        left.setOnTouchListener{ view: View, direction: MotionEvent? -> move(Direction.LEFT) }
         val right = findViewById<ImageView>(R.id.right)
-        right.setOnClickListener{ move(Direction.RIGHT) }
+        right.setOnTouchListener{ view: View, direction: MotionEvent? -> move(Direction.RIGHT) }
         val down = findViewById<ImageView>(R.id.down)
-        down.setOnClickListener{ move(Direction.BOTTOM) }
+        down.setOnTouchListener{ view: View, direction: MotionEvent? -> move(Direction.BOTTOM) }
     }
 
 
