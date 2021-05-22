@@ -7,7 +7,18 @@ import android.view.KeyEvent.*
 import android.widget.FrameLayout
 import android.widget.ImageView
 
+const val CELL_SIZE = 50
+const val VERTICAL_CELL_AMOUNT = 38
+const val HORIZONTAL_CELL_AMOUNT = 38
+const val VERTICAL_MAX_SIZE = CELL_SIZE + VERTICAL_CELL_AMOUNT
+const val HORIZONTAL_MAX_SIZE = CELL_SIZE + HORIZONTAL_CELL_AMOUNT
+
 class MainActivity : AppCompatActivity() {
+
+    private val GridDrawer by lazy {
+        GridDrawer(this)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -37,6 +48,7 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when(item.itemId) {
             R.id.menu_settings -> {
+                GridDrawer.drawGrid()
                 return true
             }
             else -> super.onOptionsItemSelected(item)
