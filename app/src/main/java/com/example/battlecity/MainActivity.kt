@@ -20,14 +20,15 @@ class MainActivity : AppCompatActivity() {
 //            ACTION_DOWN -> move(Direction.BOTTOM)
 //
 //        }
+
         val up = findViewById<ImageView>(R.id.up)
-        up.setOnTouchListener{ view: View, direction: MotionEvent? -> move(Direction.UP) }
+        up.setOnClickListener{ move(Direction.UP) }
         val left = findViewById<ImageView>(R.id.left)
-        left.setOnTouchListener{ view: View, direction: MotionEvent? -> move(Direction.LEFT) }
+        left.setOnClickListener{ move(Direction.LEFT) }
         val right = findViewById<ImageView>(R.id.right)
-        right.setOnTouchListener{ view: View, direction: MotionEvent? -> move(Direction.RIGHT) }
+        right.setOnClickListener{ move(Direction.RIGHT) }
         val down = findViewById<ImageView>(R.id.down)
-        down.setOnTouchListener{ view: View, direction: MotionEvent? -> move(Direction.BOTTOM) }
+        down.setOnClickListener{ move(Direction.BOTTOM) }
     }
 
 

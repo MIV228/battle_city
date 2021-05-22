@@ -22,8 +22,8 @@
 
         <ImageView
             android:id="@+id/my_tank"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:src="@drawable/tank"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
