@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.KeyEvent.*
+import android.view.Menu
 import android.view.MotionEvent
 import android.view.View
 import android.widget.FrameLayout
@@ -29,6 +30,11 @@ class MainActivity : AppCompatActivity() {
         right.setOnClickListener{ move(Direction.RIGHT) }
         val down = findViewById<ImageView>(R.id.down)
         down.setOnClickListener{ move(Direction.BOTTOM) }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+
+        return super.onCreateOptionsMenu(menu)
     }
 
 
