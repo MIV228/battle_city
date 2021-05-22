@@ -69,29 +69,33 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun move(direction: Direction) {
+        val myTank = findViewById<ImageView>(R.id.my_tank)
+        val layoutParams = (myTank.layoutParams) as FrameLayout.LayoutParams
         when (direction) {
             Direction.UP -> {
-                val myTank = findViewById<ImageView>(R.id.my_tank)
+//                val myTank = findViewById<ImageView>(R.id.my_tank)
+                if (layoutParams.topMargin > 0) {
+                    myTank.layoutParams
+                }
                 myTank.rotation = 0F
                 (myTank.layoutParams as FrameLayout.LayoutParams).topMargin -= CELL_SIZE
             }
             Direction.BOTTOM -> {
-                val myTank = findViewById<ImageView>(R.id.my_tank)
+//                val myTank = findViewById<ImageView>(R.id.my_tank)
                 myTank.rotation = 180F
                 (myTank.layoutParams as FrameLayout.LayoutParams).topMargin += CELL_SIZE
             }
             Direction.LEFT -> {
-                val myTank = findViewById<ImageView>(R.id.my_tank)
+//                val myTank = findViewById<ImageView>(R.id.my_tank)
                 myTank.rotation = 270F
                 (myTank.layoutParams as FrameLayout.LayoutParams).leftMargin -= CELL_SIZE
             }
             Direction.RIGHT -> {
-                val myTank = findViewById<ImageView>(R.id.my_tank)
+//                val myTank = findViewById<ImageView>(R.id.my_tank)
                 myTank.rotation = 90F
                 (myTank.layoutParams as FrameLayout.LayoutParams).leftMargin += CELL_SIZE
             }
         }
-        val myTank = findViewById<ImageView>(R.id.my_tank)
         val box = findViewById<FrameLayout>(R.id.box)
         box.removeView(myTank)
         box.addView(myTank)
