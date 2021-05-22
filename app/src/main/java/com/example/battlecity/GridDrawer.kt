@@ -6,7 +6,7 @@ import android.view.View
 
 import android.widget.FrameLayout
 
-class GridDrawer(val context: Context) {
+class GridDrawer(private val context: Context) {
     fun drawGrid() {
         val box = (context as Activity).findViewById<FrameLayout>(R.id.box)
         drawHorizontalLines(box)
@@ -27,7 +27,16 @@ class GridDrawer(val context: Context) {
     }
 
     private fun drawHorizontalLines(box: FrameLayout) {
-
+        var leftMargin = 0
+        while (leftMargin <= box.layoutParams.height) {
+            val verticalLine = View(context)
+            val layoutParams = FrameLayout.LayoutParams( 1, FrameLayout.LayoutParams.MATCH_PARENT)
+            leftMargin += 50
+            layoutParams.leftMargin = leftMargin
+            verticalLine.layoutParams = layoutParams
+            verticalLine.setBackgroundColor(context.resources.getColor(android.R.color.white))
+            box.addView(verticalLine)
+        }
     }
 
 }
