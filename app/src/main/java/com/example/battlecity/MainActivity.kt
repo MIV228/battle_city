@@ -7,13 +7,14 @@ import android.view.KeyEvent.*
 import android.widget.FrameLayout
 import android.widget.ImageView
 
-const val CELL_SIZE = 50
-const val VERTICAL_CELL_AMOUNT = 38
-const val HORIZONTAL_CELL_AMOUNT = 38
-const val VERTICAL_MAX_SIZE = CELL_SIZE + VERTICAL_CELL_AMOUNT
-const val HORIZONTAL_MAX_SIZE = CELL_SIZE + HORIZONTAL_CELL_AMOUNT
+var CELL_SIZE = 50
+var VERTICAL_CELL_AMOUNT = 38
+var HORIZONTAL_CELL_AMOUNT = 38
+var VERTICAL_MAX_SIZE = CELL_SIZE + VERTICAL_CELL_AMOUNT
+var HORIZONTAL_MAX_SIZE = CELL_SIZE + HORIZONTAL_CELL_AMOUNT
 
 class MainActivity : AppCompatActivity() {
+
 
     private val GridDrawer by lazy {
         GridDrawer(this)
