@@ -33,7 +33,6 @@
 
     </FrameLayout>
 
-
     <LinearLayout
         android:layout_width="200dp"
         android:layout_height="200dp"
@@ -43,7 +42,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.98">
+        app:layout_constraintVertical_bias="0.975">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -52,7 +51,6 @@
             android:orientation="vertical">
 
             <ImageView
-
                 style="@style/JoyStick_Buttons" />
 
             <ImageView
@@ -61,9 +59,7 @@
                 app:srcCompat="@drawable/left" />
 
             <ImageView
-
                 style="@style/JoyStick_Buttons" />
-
 
         </LinearLayout>
 
@@ -79,7 +75,6 @@
                 app:srcCompat="@drawable/up" />
 
             <ImageView
-
                 style="@style/JoyStick_Buttons" />
 
             <ImageView
@@ -87,9 +82,7 @@
                 style="@style/JoyStick_Buttons"
                 app:srcCompat="@drawable/down" />
 
-
         </LinearLayout>
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -98,7 +91,6 @@
             android:orientation="vertical">
 
             <ImageView
-
                 style="@style/JoyStick_Buttons" />
 
             <ImageView
@@ -107,10 +99,8 @@
                 app:srcCompat="@drawable/right" />
 
             <ImageView
-
                 style="@style/JoyStick_Buttons" />
         </LinearLayout>
-
 
     </LinearLayout>
 

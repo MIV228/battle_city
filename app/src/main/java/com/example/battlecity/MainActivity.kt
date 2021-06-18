@@ -8,17 +8,12 @@ import android.widget.FrameLayout
 import android.widget.ImageView
 
 var CELL_SIZE = 50
-var VERTICAL_CELL_AMOUNT = 38
-var HORIZONTAL_CELL_AMOUNT = 38
+var VERTICAL_CELL_AMOUNT = 15
+var HORIZONTAL_CELL_AMOUNT = 15
 var VERTICAL_MAX_SIZE = CELL_SIZE + VERTICAL_CELL_AMOUNT
 var HORIZONTAL_MAX_SIZE = CELL_SIZE + HORIZONTAL_CELL_AMOUNT
 
 class MainActivity : AppCompatActivity() {
-
-
-    private val GridDrawer by lazy {
-        GridDrawer(this)
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,21 +37,6 @@ class MainActivity : AppCompatActivity() {
         right.setOnClickListener{ move(Direction.RIGHT) }
         val down = findViewById<ImageView>(R.id.down)
         down.setOnClickListener{ move(Direction.BOTTOM) }
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.settings, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when(item.itemId) {
-            R.id.menu_settings -> {
-                GridDrawer.drawGrid()
-                return true
-            }
-            else -> super.onOptionsItemSelected(item)
-        }
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
